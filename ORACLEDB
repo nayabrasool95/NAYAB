@@ -1,0 +1,7 @@
+node {
+   echo 'SQLPlusRunner running user define script for system@CDB2'
+  
+ step([$class: 'SQLPlusRunnerBuilder',credentialsId:'system', 
+instance:'xe',scriptType:'userDefined', script: '',scriptContent: 
+'select * from v$version'])
+}
